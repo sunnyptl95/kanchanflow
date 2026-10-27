@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+/* Design tokens: defined once, used everywhere */
+@theme inline {
+  --color-graphite: #1b1c1f;
+  --color-coal: #2a2c31;
+  --color-gold: #e0a419;
+  --color-gold-deep: #7a5200;
+  --color-steel: #e4e8ec;
+  --color-steel-dark: #c3cad2;
+  --color-paper: #f5f6f7;
+  --color-muted: #454b53;
+  --font-display: var(--font-barlow);
+  --font-sans: var(--font-plex);
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+
+:focus-visible {
+  outline: 2px solid #1b1c1f;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 5px #e0a419;
+}
+
+/* The one orchestrated motion: pipeline bars fill once on load */
+@keyframes fill { from { width: 0; } to { width: var(--w); } }
+.bar-fill { width: var(--w); animation: fill 1.2s 0.3s ease-out both; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition: none !important; }
+}
