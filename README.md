@@ -1,4 +1,4 @@
-# KanchanFlow marketing site
+# KanchanFlow marketing site || Made by Antigravity 
 
 Three-page Next.js marketing site (Home, Features, Pricing) for KanchanFlow, a manufacturing CRM. Built for the Meru Technosoft frontend assignment.
 
